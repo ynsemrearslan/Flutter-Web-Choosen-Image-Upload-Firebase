@@ -133,8 +133,8 @@ class _ChoosenImageState extends State<ChoosenImage> {
   }
 
   Future<void> signInFirebase() async {
-    String userName = 'yunus@gmail.com';
-    String pass = 'Merhaba98';
+    String userName = '';
+    String pass = '';
     try {
       await signInWithEmailPassword(userName, pass)
           .then((value) => value == null
@@ -156,8 +156,8 @@ class _ChoosenImageState extends State<ChoosenImage> {
         return null;
       }
       firebase_storage.Reference ref = firebase_storage.FirebaseStorage.instance
-          .ref('gs://logafic-7911f.appspot.com')
-          .child('users2')
+          .ref('')
+          .child('')
           .child('$uid.jpg');
       final metadata = firebase_storage.SettableMetadata(
           contentType: 'image/jpeg',
